@@ -22,16 +22,41 @@ dados_np = np.array([1, 2, 3, 4, 5])
 #print(dados.head())
 
 # Introdução ao Numpy
-array = np.array([1, 2, 3, 4, 5])
+# array = np.array([1, 2, 3, 4, 5])
+
+# print(array)
+
+# print(array * 2)
+
+# matriz = np.array([[1, 2, 3], [4, 5, 6]])
+
+# print(matriz)
+
+# print(np.min(matriz))
+
+# print(np.mean(array))
+
+# Arrays com numpy
+
+arr = [10, 20, 30]
+
+array = np.array(arr)
 
 print(array)
 
-print(array * 2)
+zeros = np.zeros((4, 4))
 
-matriz = np.array([[1, 2, 3], [4, 5, 6]])
+print(zeros)
 
-print(matriz)
+uns = np.ones((3, 7))
 
-print(np.min(matriz))
+print(uns)
 
-print(np.mean(array))
+aleatorios = np.random.rand(3, 5)
+
+print(aleatorios)
+
+# inicial, final, num. els
+espacados = np.linspace(0, 20, 3)
+
+print(espacados)
