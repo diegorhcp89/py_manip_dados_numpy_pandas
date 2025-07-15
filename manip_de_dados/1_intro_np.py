@@ -9,13 +9,13 @@ print(dados_quadrados)
 
 dados_np = np.array([1, 2, 3, 4, 5])
 
-#dados_quadrados_np = dados_np ** 2
+dados_quadrados_np = dados_np ** 2
 
-#print(dados_quadrados_np)
+print(dados_quadrados_np)
 
-#dados = pd.read_csv("manip_de_dados/dados.csv")
+dados = pd.read_csv("manip_de_dados/dados.csv")
 
-#print(dados.head())
+print(dados.head())
 
 #dados["coluna_existente"] = dados["coluna_existente"] * 2
 
