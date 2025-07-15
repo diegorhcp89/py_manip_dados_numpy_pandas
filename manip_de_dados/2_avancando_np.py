@@ -12,3 +12,17 @@ print(array_multi[array_multi > 3])
 print(array_multi[:1, 1:4])
 
 print(array_multi[:, 1:4])
+
+# aula 2 - operações matemáticas
+
+print(array_multi + 2)
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+print(arr1 + arr2)
+
+print(arr1 * arr2)
+
+#broadcasting
+print(array_multi + arr1[2])
