@@ -26,3 +26,15 @@ print(arr1 * arr2)
 
 #broadcasting
 print(array_multi + arr1[2])
+
+# Aula 3 operações estatisticas
+
+print(np.mean(array_multi))
+
+print(np.median(array_multi))
+
+print(np.std(array_multi))
+
+print(np.sum(array_multi))
+
+print(np.prod(array_multi))
