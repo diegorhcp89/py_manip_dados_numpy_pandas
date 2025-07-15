@@ -38,3 +38,18 @@ print(np.std(array_multi))
 print(np.sum(array_multi))
 
 print(np.prod(array_multi))
+
+# aula 4 - transformação e agregação
+
+arr3 = np.array([1, 2, 3, 4, 5, 6])
+
+matriz = arr3.reshape(2, 3)
+
+print(matriz)
+
+print(matriz.T)
+
+print(matriz.flatten())
+
+print(np.max(matriz))
+print(np.min(matriz))
