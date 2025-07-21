@@ -48,6 +48,7 @@ df = df.drop(columns=["Idade"])
 
 print(df)
 
+# Converte a coluna para numérico (transforma valores inválidos em NaN)
 df['Salário'] = pd.to_numeric(df['Salário'], errors='coerce')
 
 # Preenche os NaN com 0 (ou outro valor padrão se preferir)
@@ -62,3 +63,21 @@ print(df)
 df['Categoria'] = df['Salário'].apply(lambda x: 'Ganha bem' if x > 4000 else 'Ganha mal')
 
 print(df)
+
+# aula 4 - valores ausentes
+
+df = pd.DataFrame({'A': [1, None, 3], 'B': [1, 5, None], 'C': [6, None, None]})
+
+print(df.isnull())
+
+df_sem_nulos = df.dropna()
+
+print(df_sem_nulos)
+
+df_preenchido = df.fillna(0).infer_objects(copy=False)
+
+print(df_preenchido)
+
+df_ffill = df.ffill().infer_objects(copy=False)
+
+print(df_ffill)
