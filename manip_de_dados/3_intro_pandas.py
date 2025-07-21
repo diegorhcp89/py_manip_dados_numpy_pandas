@@ -37,3 +37,24 @@ df = pd.read_csv('manip_de_dados/teste.csv')
 df = df.fillna("Valor Padrão").infer_objects(copy=False)
 
 print(df)
+
+# aula 3- manipulação com pandas
+
+df['Está Empregado'] = [False, False, True, True, False]
+
+print(df)
+
+df = df.drop(columns=["Idade"])
+
+print(df)
+
+print(df['Salário'].head())  # Mostra os primeiros valores
+print(df['Salário'].dtype)   # Mostra o tipo de dado da coluna
+
+df['Salário'] = df['Salário'] + 100
+
+#print(df)
+
+df['Categoria'] = df['Salário'].apply(lambda x: 'Ganha bem' if x > 4000 else 'Ganha mal')
+
+#print(df)
