@@ -48,13 +48,17 @@ df = df.drop(columns=["Idade"])
 
 print(df)
 
-print(df['Salário'].head())  # Mostra os primeiros valores
-print(df['Salário'].dtype)   # Mostra o tipo de dado da coluna
+df['Salário'] = pd.to_numeric(df['Salário'], errors='coerce')
 
+# Preenche os NaN com 0 (ou outro valor padrão se preferir)
+df['Salário'] = df['Salário'].fillna(0)
+
+# Agora a soma funciona
 df['Salário'] = df['Salário'] + 100
 
-#print(df)
+print(df)
 
+# Cria a coluna de categoria
 df['Categoria'] = df['Salário'].apply(lambda x: 'Ganha bem' if x > 4000 else 'Ganha mal')
 
-#print(df)
+print(df)
